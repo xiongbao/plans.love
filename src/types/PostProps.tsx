@@ -5,6 +5,12 @@ export type PostProps = {
     updatedAt: string;
     number: number;
     category: string;
+    labels: {
+      nodes: [{
+        name: string;
+        color: string;
+      }];
+    };
   };
 };
 
@@ -34,6 +40,12 @@ export type PostDetailProps = {
         updatedAt: string;
         title: string;
         number: number;
+        labels: {
+          nodes: [{
+            name: string;
+            color: string;
+          }];
+        };
       };
     };
   };

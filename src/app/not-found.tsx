@@ -15,7 +15,7 @@ export default function NotFound(): JSX.Element {
         Could not find requested resource.
         <br />
         <br />
-        <Link href="/posts">View all posts</Link>
+        <Link href="/plans">View all plans</Link>
       </p>
     </main>
   );

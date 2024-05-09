@@ -25,7 +25,7 @@ const Page = ({ searchParams }: PageProps) => {
     <main className="max-w-screen-md mx-auto px-4">
       <section className="my-20">
         <header>
-          <h1 className="text-4xl font-semibold mt-20 mb-6">Posts</h1>
+          <h1 className="text-4xl font-semibold mt-20 mb-6">计划</h1>
         </header>
         <Suspense
           fallback={Array.from({ length: 3 }).map((_, i) => (

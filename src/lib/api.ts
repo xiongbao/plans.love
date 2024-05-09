@@ -17,7 +17,7 @@ export async function getPostsList(
           discussions(
             first: ${limit}
             orderBy: {field: UPDATED_AT, direction: DESC}
-            states: OPEN
+            categoryId: "${process.env.DISCUSSIONS_CATEGORY_ID}"
           ) {
             edges {
               node {
@@ -25,6 +25,12 @@ export async function getPostsList(
                 url
                 updatedAt
                 number
+                labels(first: 10) {
+                  nodes {
+                    name
+                    color
+                  }
+                }
               }
             }
             pageInfo {
@@ -69,6 +75,12 @@ export async function getPostDetail(id: string): Promise<PostDetailProps> {
             updatedAt
             title
             number
+            labels(first: 10) {
+              nodes {
+                name
+                color
+              }
+            }
           }
         }
       }

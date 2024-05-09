@@ -19,6 +19,7 @@ const CardsList = async ({ limit, offset }: CardsListProps) => {
         title={post.title}
         createdAt={post.updatedAt}
         category={post.category}
+        labels={post.labels}
       />
     ))
   ) : (

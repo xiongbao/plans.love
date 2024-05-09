@@ -8,7 +8,7 @@ const Navbar = () => {
         <Link href="/">Home</Link>
         <ul className="flex space-x-8 text-neutral-400">
           <li className="hover:text-neutral-300 duration-200">
-            <Link href="/posts">Posts</Link>
+            <Link href="/plans">Plans</Link>
           </li>
           <li className="hover:text-neutral-300 duration-200">
             <Link href="/about">About</Link>

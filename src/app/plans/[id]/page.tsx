@@ -18,7 +18,7 @@ export async function generateMetadata({
     title: `${post.title} | Ulvi Damirli`,
     description: strippedString.trim().slice(0, 150),
     alternates: {
-      canonical: `/posts/${post.number}`,
+      canonical: `/plans/${post.number}`,
     },
   };
 }
@@ -26,6 +26,8 @@ export async function generateMetadata({
 const Page = async ({ params }: PageProps) => {
   const { id } = params;
   const post = (await getPostDetail(id)).data.repository.discussion;
+
+  console.log(post.labels.nodes[0].name)
 
   return (
     <main className="px-4 my-20">
