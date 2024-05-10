@@ -5,9 +5,9 @@ import { Suspense } from "react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Ulvi Damirli | Homepage",
+  title: "爱的计划",
   description:
-    "Software Engineer who loves to design and build digital products.",
+    "记录我在父母与妻女之间的幸福事件",
 };
 
 const Page = () => {
