@@ -38,11 +38,11 @@ const Page = () => {
           </Link>
         </header>
         <Suspense
-          fallback={Array.from({ length: 3 }).map((_, i) => (
+          fallback={Array.from({ length: 10 }).map((_, i) => (
             <CardSkeleton key={i} />
           ))}
         >
-          <CardsList limit={3} offset={0} />
+          <CardsList limit={10} offset={0} latest={true} />
         </Suspense>
       </section>
     </main>

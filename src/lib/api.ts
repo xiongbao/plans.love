@@ -5,7 +5,8 @@ import type { PostDetailProps, PostsListProps } from "@/types/PostProps";
 
 export async function getPostsList(
   limit: number,
-  offset: number
+  offset: number,
+  latest: boolean,
 ): Promise<PostsListProps> {
   const query = `
       query PostsList {
@@ -16,7 +17,7 @@ export async function getPostsList(
         ) {
           discussions(
             first: ${limit}
-            orderBy: {field: UPDATED_AT, direction: DESC}
+            orderBy: {field: CREATED_AT, direction: DESC}
             categoryId: "${process.env.DISCUSSIONS_CATEGORY_ID}"
           ) {
             edges {

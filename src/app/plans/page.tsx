@@ -13,13 +13,14 @@ type PageProps = {
   searchParams: {
     limit: number;
     offset: number;
+    latest: boolean;
   };
 };
 
 // TODO: Implement infinite scroll
 
 const Page = ({ searchParams }: PageProps) => {
-  const { limit = 10, offset = 0 } = searchParams;
+  const { limit = 10, offset = 0, latest = false } = searchParams;
 
   return (
     <main className="max-w-screen-md mx-auto px-4">
@@ -32,7 +33,7 @@ const Page = ({ searchParams }: PageProps) => {
             <CardSkeleton key={i} />
           ))}
         >
-          <CardsList limit={limit} offset={offset} />
+          <CardsList limit={limit} offset={offset} latest={latest} />
         </Suspense>
       </section>
     </main>
